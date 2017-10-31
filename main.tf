@@ -44,7 +44,7 @@ resource "aws_security_group" "external" {
   }
 }
 
-resource "aws_lb" "internal_alb" {
+resource "aws_lb" "external_alb" {
   count           = "${var.external_lb}"
   name            = "${var.name}-external"
   internal        = "${var.external_lb}"

@@ -22,7 +22,7 @@ variable "private_subnets" {
   default     = []
 }
 
-variable "pulic_subnets" {
+variable "public_subnets" {
   type        = "list"
   description = "List of public subnets for externally facing alb"
   default     = []
