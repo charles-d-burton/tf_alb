@@ -13,6 +13,8 @@ resource "aws_security_group" "internal" {
   }
 
   egress {
+    from_port   = 0
+    to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["${data.aws_vpc.selected.cidr_block}"]
   }
@@ -39,6 +41,8 @@ resource "aws_security_group" "external" {
   }
 
   egress {
+    from_port   = 0
+    to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
