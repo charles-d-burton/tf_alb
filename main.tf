@@ -43,7 +43,7 @@ resource "aws_security_group_rule" "external_egress" {
 resource "aws_lb" "external_alb" {
   count           = "${var.external_lb}"
   name            = "${var.name}-external"
-  internal        = "${var.external_lb}"
+  internal        = false
   security_groups = ["${aws_security_group.external.id}"]
   subnets         = ["${var.public_subnets}"]
 }
