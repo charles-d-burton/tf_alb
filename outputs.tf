@@ -30,9 +30,9 @@ output "external_alb_dns_name" {
   value = "${aws_lb.external_alb.*.dns_name}"
 }
 
-output "external_canonical_hosted_zone_id" {
+/* output "external_canonical_hosted_zone_id" {
   value = "${aws_lb.external_alb.*.canonical_hosted_zone_id}"
-}
+} */
 
 output "external_zone_id" {
   value = "${aws_lb.external_alb.*.zone_id}"
