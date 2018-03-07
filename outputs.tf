@@ -10,9 +10,9 @@ output "internal_alb_dns_name" {
   value = "${aws_lb.internal_alb.*.dns_name}"
 }
 
-output "internal_canonical_hosted_zone_id" {
+/* output "internal_canonical_hosted_zone_id" {
   value = "${aws_lb.internal_alb.*.canonical_hosted_zone_id}"
-}
+} */
 
 output "internal_zone_id" {
   value = "${aws_lb.internal_alb.*.zone_id}"
