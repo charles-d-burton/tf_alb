@@ -39,9 +39,9 @@ output "external_zone_id" {
 }
 
 output "internal_security_group_id" {
-  value = "${aws_security_group.*.internal.id}"
+  value = "${aws_security_group.internal.*.id}"
 }
 
 output "external_security_group_id" {
-  value = "${aws_security_group.*.external.id}"
+  value = "${aws_security_group.external.*.id}"
 }
